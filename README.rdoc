@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a relatively simple blog app to work through Rails associations.
+Also used to work on css & html appearance.
 
-Things you may want to cover:
+* DataModel
+** Post
+*** has one-to-many relationship with a comment (has_many)
+*** has one-to-one relationship with an Author (has_one)
+*** has one-to-one relatinship with a Category (has_one)
 
-* Ruby version
+** Comment
+*** has many-to-one relationship with a Post (belongs_to)
+*** has many-to-one relationship with an Author (has_one)
 
-* System dependencies
+** Author
+*** has one-to-many relationship with Posts (belongs_to)
+*** has one-to-many relationship with Comments (belongs_to)
 
-* Configuration
+** Category
+*** has one-to-many relationship with Posts (belongs_to)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
