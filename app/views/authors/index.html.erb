@@ -4,5 +4,13 @@
     <p>
       <%= author.name %>
       <%= author.title %>
+      <%= link_to "Edit", edit_author_path(author) %>
+      | <%= link_to 'Delete', author, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </div>
+<div>
+  <h3>Add New Author</h3>
+  <%= render 'form' %>
+</div>
+
+
