@@ -3,7 +3,7 @@
 This is a relatively simple blog app to work through Rails associations.
 Also used to work on css & html appearance.
 
-== DataModel
+# DataModel
 
 ## Post
 * has one-to-many relationship with a comment (has_many)
