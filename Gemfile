@@ -36,8 +36,8 @@ group :development, :test do
   gem 'pry-byebug'
 
   # User rspec and factory girl for testing framework
-  gem "factory_girl_rails", "~> 4.0"
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0.0.beta4'
