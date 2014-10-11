@@ -1,0 +1,13 @@
+<h2>Category Listing</h2>
+<div>
+  <% @categories.each do | category | %>
+    <p>
+      <%= category.name %>
+      <%= link_to "Edit", edit_category_path(category) %>
+      | <%= link_to 'Delete', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+</div>
+<div>
+  <h3>Add New Category</h3>
+  <%= render 'form' %>
+</div>
