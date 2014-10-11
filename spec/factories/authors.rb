@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :author do
-    name "MyString"
-    title "MyString"
+    name "Author Name1"
+    title "Author 1 Title"
   end
 end
