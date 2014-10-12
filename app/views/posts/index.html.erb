@@ -12,7 +12,8 @@
             <%= link_to "View", post_path(post) %>
           </h4>
           By: <%= post.author.name %>
-          <% binding.pry %>
+          (<%= post.created_at.strftime("%Y-%m-%d") %>,
+          Num Comments: <%= post.comments.count %>)
           Category: <%= post.category.name ? post.category.name : ''%>
         </article>
         </li>
