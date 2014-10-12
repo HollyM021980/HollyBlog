@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe AuthorsController, :type => :controller do
-  # it "loads all of the authors into @authors" do
-  #   author1 = FactoryGirl.create(:author)
+RSpec.describe CategoriesController, :type => :controller do
+
+  # it "loads all of the categories into @categories" do
+  #   category1 = FactoryGirl.create(:category)
   #   get :index
 
   #   expect(assigns(:authors)).to match_array([author1])
