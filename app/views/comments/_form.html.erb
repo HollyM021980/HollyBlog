@@ -1,0 +1,7 @@
+<%= form_for(@comment) do |f| %>
+    Author: <%= f.collection_select :author_id, Author.all, :id, :name %>
+    </br>
+    Content: <%= f.text_area :content %>
+    </br>
+    <%= f.submit %>
+<% end %>

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :snoopies, only: [:index]
   resources :posts
+  resources :comments
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,4 +1,6 @@
 <%= form_for(@post) do |f| %>
+    Author: <%= f.collection_select :author_id, Author.all, :id, :name %>
+    </br>
     Subject: <%= f.text_field :subject %>
     </br>
     Category: <%= f.collection_select :category_id, Category.all, :id, :name %>

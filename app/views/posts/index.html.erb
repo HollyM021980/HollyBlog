@@ -12,9 +12,15 @@
             <%= link_to "View", post_path(post) %>
           </h4>
           By: <%= post.author.name %>
-          Category: <%= post.category.name %>
+          <% binding.pry %>
+          Category: <%= post.category.name ? post.category.name : ''%>
         </article>
         </li>
     <% end %>
   </ul>
 </div>
+<nav>
+  <ul>
+    <li><%= link_to "New Post", new_post_path %></li>
+  </ul>
+</nav>
