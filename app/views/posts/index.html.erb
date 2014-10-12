@@ -1,1 +1,13 @@
 <h1>Holly's Blog</h1>
+
+<div>
+  <h2> Posts </h2>
+  <ol>
+    <% @posts.each do | post | %>
+      <article>
+        <ul><h4><%= link_to post.subject, post_path(post) %></h4>
+        By: <%= post.author.name %>
+      </article>
+    <% end %>
+  </ol>
+</div>
