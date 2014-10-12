@@ -2,12 +2,19 @@
 
 <div>
   <h2> Posts </h2>
-  <ol>
+  <ul>
     <% @posts.each do | post | %>
-      <article>
-        <ul><h4><%= link_to post.subject, post_path(post) %></h4>
-        By: <%= post.author.name %>
-      </article>
+      <li>
+        <article>
+          <h4>
+            <%= link_to post.subject, post_path(post) %>
+            <%= link_to "Edit", edit_post_path(post) %> |
+            <%= link_to "View", post_path(post) %>
+          </h4>
+          By: <%= post.author.name %>
+          Category: <%= post.category.name %>
+        </article>
+        </li>
     <% end %>
-  </ol>
+  </ul>
 </div>

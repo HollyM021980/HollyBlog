@@ -1,0 +1,9 @@
+<%= form_for(@post) do |f| %>
+    Subject: <%= f.text_field :subject %>
+    </br>
+    Category: <%= f.collection_select :category_id, Category.all, :id, :name %>
+    </br>
+    Content: <%= f.text_area :content %>
+    </br>
+    <%= f.submit %>
+<% end %>

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :authors
   resources :categories
   resources :snoopies, only: [:index]
-  resources :posts, only: [:index, :show]
+  resources :posts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
