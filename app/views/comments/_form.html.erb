@@ -1,9 +1,15 @@
 <%= form_for(@comment) do |f| %>
-  <%= f.hidden_field :post_id %>
-  <%= f.text_area :content %>
-  </br>
-  You: <%= f.collection_select :author_id, Author.all, :id, :name %>
-  </br>
-  <%= f.submit %>
-  </br>
+  <fieldset>
+    <legend>Tell us what  you think</legend>
+     <div class="row">
+        <div class="large-12 columns">
+          <label>Tell us who you are
+            <%= f.collection_select :author_id, Author.all, :id, :name %>
+          </label>
+        </div>
+      </div>
+      <%= label_tag("Your thoughts go here") %>
+      <%= f.text_area :content %>
+      <%= f.submit class: "button tiny" %>
+  </fieldset>
 <% end %>

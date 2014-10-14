@@ -1,34 +1,52 @@
-<h2><%= @post.subject %></h2>
-<article>
-  <h4>
-    By: <%= @post.author.name %>
-    (<%= @post.created_at.strftime("%Y-%m-%d") %>)
-  </h4>
-  <h4>Category: <%= @post.category.name %></h4>
-  <div>
-    <%= @post.content %>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="nav-bar right">
+     <ul class="button-group">
+       <li><%= link_to "Edit Post", edit_post_path(@post), class: "button tiny" %></li>
+       <li><%= link_to "Return to Post Listing", posts_path, class: "button tiny"%></li>
+      </ul>
+    </div>
+    <h1>Holly's Blog <small>Come chat for a while...</small></h1>
+    <hr/>
   </div>
-</article>
-</br>
-<div>
-<h3>Comments:</h3>
-  <ul>
-    <% @comments.each do | comment | %>
-      <li>
-        <%= comment.content %>
-        (<%= comment.author.name %>,
-        <%= comment.created_at.strftime("%Y-%m-%d") %>)
-      </li>
-    <% end %>
-  </ul>
 </div>
-</br>
-<div>
-  <h4>Add New Comment</h4>
-  <%= render 'comments/form' %>
+
+
+
+<div class="row">
+
+
+<div class="large-9 columns" role="content">
+
+  <article>
+
+    <h3><a href="#"><%= @post.subject %></a></h3>
+    <h6>Written by <%= @post.author.name %></a> on <%= @post.created_at.strftime("%Y-%m-%d") %>.</h6>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <p><%= @post.content %></p>
+      </div>
+    </div>
+
+    <div>
+    <h5>Comments:</h5 >
+      <ul>
+        <% @comments.each do | comment | %>
+          <li>
+            <%= comment.content %>
+            (From <%= comment.author.name %> on <%= comment.created_at.strftime("%Y-%m-%d") %>)
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </article>
+
 </div>
-</br>
-<nav>
-  <%= link_to "Edit", edit_post_path(@post) %> |
-  <%= link_to "Return to Post Listing", posts_path %>
-</nav>
+
+<div>
+  <aside class="large-3 columns">
+    <%= render 'comments/form' %>
+  </aside>
+</div>
+

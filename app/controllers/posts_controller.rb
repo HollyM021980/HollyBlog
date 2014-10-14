@@ -40,4 +40,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:subject, :content, :created_at, :author_id, :category_id)
   end
 
+  def posts_by_category(all_posts)
+    # all_posts.map {}
+  end
+
 end
