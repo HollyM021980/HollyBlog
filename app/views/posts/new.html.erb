@@ -1,5 +1,17 @@
+<!-- Nav Bar -->
+<div class="row">
+  <div class="large-12 columns">
+    <div class="nav-bar right">
+     <ul class="button-group">
+       <li><%= link_to "Cancel", :back, class: "button tiny" %></li>
+      </ul>
+    </div>
+    <h1>Holly's Blog <small>Come chat for a while...</small></h1>
+    <hr/>
+  </div>
+</div>
+<!-- End Nav -->
+
 <div>
-  <h3>New Post</h3>
   <%= render 'form' %>
 </div>
-<%= link_to "Cancel", :back %>
