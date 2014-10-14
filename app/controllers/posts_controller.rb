@@ -3,6 +3,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order(created_at: :desc)
+    @categories = Category.all
+    # binding.pry
+    # @posts = posts_by_category
   end
 
   def show
@@ -40,8 +43,17 @@ class PostsController < ApplicationController
     params.require(:post).permit(:subject, :content, :created_at, :author_id, :category_id)
   end
 
-  def posts_by_category(all_posts)
-    # all_posts.map {}
+  def posts_by_category
+    sp = []
+    cats = Category.order(name: :asc)
+    cats.each do | category |
+      sp << category.name
+      sp << Post.where(category_id: category.id).order(created_at: :desc)
+      binding.pry
+      sp
+    end
+    binding.pry
+    sp
   end
 
 end

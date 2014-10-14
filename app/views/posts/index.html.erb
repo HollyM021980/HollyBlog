@@ -20,7 +20,7 @@
 
     <% @posts.each do | post | %>
       <article>
-        <h4><%= link_to post.subject, post_path(post) %></h4>
+        <h5><%= link_to post.subject, post_path(post) %></h5>
         <h6>Written by <%= post.author.name %> on <%= post.created_at.strftime("%Y-%m-%d") %>
         . (<%= post.comments.count.to_s + "#{post.comments.count >1 ? ' comments' : ' comment'}" %>)</h6>
 
@@ -42,11 +42,9 @@
   <aside class="large-3 columns">
     <h5>Categories</h5>
     <ul class="side-nav">
-      <li><a href="#">News</a></li>
-      <li><a href="#">Code</a></li>
-      <li><a href="#">Design</a></li>
-      <li><a href="#">Fun</a></li>
-      <li><a href="#">Weasels</a></li>
+      <% @categories.each do | cat | %>
+        <li><%= link_to cat.name, posts_path %></li>
+      <% end %>
     </ul>
   </aside>
   <!-- End Sidebar -->
