@@ -11,6 +11,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'turbolinks'
+gem 'foundation-rails'
+group :development do
+end
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -29,6 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 
 group :development, :test do
+  # For foundation rails layout generator
+  gem 'rails_layout'
+
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
   gem 'pry-byebug'
